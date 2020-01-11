@@ -19,6 +19,7 @@
     <modules>
         <module>coco-spring</module>
         <module>coco-mybatis</module>
+        <module>coco-algorithm</module>
     </modules>
 
     <!-- repository address -->
