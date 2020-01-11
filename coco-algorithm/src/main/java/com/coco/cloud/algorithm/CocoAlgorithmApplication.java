@@ -1,4 +1,4 @@
-package com.coco.cloud.cocoalgorithm;
+package com.coco.cloud.algorithm;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
