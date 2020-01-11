@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c226aac5-4c97-4b0a-94a7-59d155fb5f73" name="47.98.179.202" url="http://47.98.179.202">
+        <fileTransfer host="47.98.179.202" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="3000000" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="d28d4ecd-5f92-46d5-bf81-d9f4f1668f0a" name="47.102.36.167" url="http://47.102.36.167">
+        <fileTransfer host="47.102.36.167" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="3000000" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="c706c237-1f5b-4c3a-9b53-574587542575" name="47.102.36.50" url="http://47.102.36.50">
+        <fileTransfer host="47.102.36.50" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="3000000" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="0c7fc330-ce89-43bc-90ec-3bb843f2694a" name="47.102.37.236" url="http://47.102.37.236">
+        <fileTransfer host="47.102.37.236" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="3000000" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
