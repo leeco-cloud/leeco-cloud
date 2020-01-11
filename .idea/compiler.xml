@@ -6,19 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="coco-cloud" />
         <module name="coco-spring" />
+        <module name="coco-mybatis" />
+        <module name="coco-cloud" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="coco-cloud" target="1.8" />
+      <module name="coco-mybatis" target="1.8" />
       <module name="coco-spring" target="1.6" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="coco-cloud" options="-parameters" />
-      <module name="coco-spring" options="-verbose -bootclasspath D:/jdk1.8.0_45/jre/lib/rt.jar" />
+      <module name="coco-mybatis" options="-parameters" />
+      <module name="coco-spring" options="-parameters -verbose -bootclasspath D:/jdk1.8.0_45/jre/lib/rt.jar" />
     </option>
   </component>
 </project>

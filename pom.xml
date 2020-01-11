@@ -16,6 +16,11 @@
         <relativePath/>
     </parent>
 
+    <modules>
+        <module>coco-spring</module>
+        <module>coco-mybatis</module>
+    </modules>
+
     <!-- repository address -->
     <repositories>
         <repository>

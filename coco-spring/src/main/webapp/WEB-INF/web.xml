@@ -8,7 +8,7 @@
 
 	<servlet>
 		<servlet-name>mvc</servlet-name>
-		<servlet-class>com.coco.spring.framework.mvc.servlet.CoCoDispatcherServlet</servlet-class>
+		<servlet-class>com.coco.cloud.spring.framework.mvc.servlet.CoCoDispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:application.properties</param-value>

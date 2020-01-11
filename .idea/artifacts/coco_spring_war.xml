@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="coco-spring.war">
+    <root id="archive" name="spring-framework.war">
       <element id="artifact" artifact-name="coco-spring:war exploded" />
     </root>
   </artifact>

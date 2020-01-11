@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="coco-spring:war exploded">
-    <output-path>$PROJECT_DIR$/coco-spring/target/coco-spring</output-path>
+    <output-path>$PROJECT_DIR$/coco-spring/target/spring-framework</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -20,7 +20,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/coco-spring/target/coco-spring/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/coco-spring/target/spring-framework/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="coco-spring/web/Web" />
     </root>
