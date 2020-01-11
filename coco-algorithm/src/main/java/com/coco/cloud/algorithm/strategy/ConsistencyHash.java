@@ -15,10 +15,9 @@ import java.util.TreeMap;
 public class ConsistencyHash {
 
     /**
-     * 设置一个 2^4-1大小的环 每个正整数都在环上
-     * 一致性hash一般采取2^32-1个node的环 这里做了修改
+     * 一致性hash一般采取2^32-1个node的环
      */
-    private final static  int INDEX_CYCLIC = 1 << 4;
+    private final static  int INDEX_CYCLIC = 0x7fffffff;
 
     /**
      * 记录所有服务器真实node
@@ -35,14 +34,19 @@ public class ConsistencyHash {
      */
     private final static int VIRTUAL_NODE_SHARD = 5;
 
-    static {
+    /**
+     * 虚拟节点默认的分片标志
+     */
+    private final static String VIRTUAL_NODE_SHARD_SPLIT = "#";
+
+    static{
         realNodes.add("47.98.179.202");
         realNodes.add("47.99.156.222");
         realNodes.add("47.102.120.43");
 
         for (String ip : realNodes) {
             for(int i = 0 ; i < VIRTUAL_NODE_SHARD ;i++){
-                int indexHash = hash(ip + VIRTUAL_NODE_SHARD + i );
+                int indexHash = hash(ip + VIRTUAL_NODE_SHARD_SPLIT + i );
                 sortedMap.put(hash(ip + VIRTUAL_NODE_SHARD + i ),ip);
                 System.out.println(indexHash);
             }
@@ -54,8 +58,9 @@ public class ConsistencyHash {
      * @param key key
      * @return ip
      */
-    public static String getRouterService(Object key) {
+    public static String getRouterService(String key) {
         int index = hash(key);
+        System.out.println("\n" + index);
         SortedMap<Integer,String> tailMap = sortedMap.tailMap(index);
         if (!tailMap.isEmpty()){
             return sortedMap.get(tailMap.firstKey());
@@ -69,13 +74,20 @@ public class ConsistencyHash {
      * @param key key
      * @return hash值
      */
-    private static int hash(Object key){
+    private static int hash(String key){
         // 尽可能的利用最大化的hashcode 减少hash碰撞
-        int hashCode = key.hashCode();
-        hashCode = hashCode ^ (hashCode >>> 16);
-        hashCode &= 0x7fffffff;
-        // 求下标
-        return hashCode & (INDEX_CYCLIC - 1);
+        final int p = 16777619;
+        int hashCode = (int)2166136261L;
+        for (int i = 0; i < key.length(); i++){
+            hashCode = (hashCode ^ key.charAt(i)) * p;
+        }
+        hashCode += hashCode << 13;
+        hashCode ^= hashCode >> 7;
+        hashCode += hashCode << 3;
+        hashCode ^= hashCode >> 17;
+        hashCode += hashCode << 5;
+        hashCode &= (INDEX_CYCLIC - 1);
+        return hashCode;
     }
 
 }
