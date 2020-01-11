@@ -70,7 +70,7 @@ public class ConsistencyHash {
     }
 
     /**
-     * 获取一致性hash值 做了响应的修改
+     * 获取一致性hash值 做了修改
      * @param key key
      * @return hash值
      */
