@@ -114,4 +114,5 @@ public class LeastRecentlyUsedHashMap {
         cache.put(4, 3);
         System.out.println(cache);
     }
+
 }
