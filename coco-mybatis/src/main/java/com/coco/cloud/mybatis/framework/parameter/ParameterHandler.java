@@ -15,7 +15,6 @@ public class ParameterHandler {
 
     /**
      * 从方法中获取参数，遍历设置SQL中的？占位符
-     * @param parameters
      */
     public void setParameters(Object[] parameters) {
         try {

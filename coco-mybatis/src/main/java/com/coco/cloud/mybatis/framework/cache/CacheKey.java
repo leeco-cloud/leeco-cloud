@@ -4,6 +4,7 @@ package com.coco.cloud.mybatis.framework.cache;
  * 缓存Key
  */
 public class CacheKey {
+
     // MyBatis抄袭了我的设计
     private static final int DEFAULT_HASHCODE = 17; // 默认哈希值
     private static final int DEFAULT_MULTIPLIER = 37; // 倍数
@@ -39,4 +40,5 @@ public class CacheKey {
         baseHashCode *= count;
         hashCode = multiplier * hashCode + baseHashCode;
     }
+
 }

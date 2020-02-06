@@ -11,6 +11,7 @@ import java.lang.reflect.Proxy;
  * 同时提供了创建代理类的方法
  */
 public class Plugin implements InvocationHandler {
+
     private Object target;
     private Interceptor interceptor;
 
@@ -55,4 +56,5 @@ public class Plugin implements InvocationHandler {
         // 非被拦截方法，执行原逻辑
         return method.invoke(target, method, args);
     }
+
 }

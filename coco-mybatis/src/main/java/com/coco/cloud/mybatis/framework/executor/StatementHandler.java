@@ -12,6 +12,7 @@ import java.sql.SQLException;
  * 封装JDBC Statement，用于操作数据库
  */
 public class StatementHandler {
+
     private ResultSetHandler resultSetHandler = new ResultSetHandler();
 
     public <T> T query(String statement, Object[] parameter, Class pojo){
@@ -68,4 +69,5 @@ public class StatementHandler {
         }
         return conn;
     }
+
 }

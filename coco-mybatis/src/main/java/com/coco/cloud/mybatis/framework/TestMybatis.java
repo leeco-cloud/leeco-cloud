@@ -19,4 +19,5 @@ public class TestMybatis {
         blog = mapper.selectBlogById(1);
         System.out.println("第二次查询: " + blog);
     }
+
 }

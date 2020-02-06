@@ -18,6 +18,7 @@ import java.util.*;
  * 全局配置类
  */
 public class Configuration {
+
     public static final ResourceBundle sqlMappings; // SQL映射关系配置，使用注解时不用重复配置
     public static final ResourceBundle properties; // 全局配置
     public static final MapperRegistry MAPPER_REGISTRY = new MapperRegistry(); // 维护接口与工厂类关系
@@ -196,4 +197,5 @@ public class Configuration {
             }
         }
     }
+
 }

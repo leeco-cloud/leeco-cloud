@@ -3,6 +3,7 @@ package com.coco.cloud.mybatis.framework.mapper;
 import java.io.Serializable;
 
 public class Blog implements Serializable{
+
     Integer bid; // 文章ID
     String name; // 文章标题
     Integer authorId; // 文章作者ID
@@ -39,4 +40,5 @@ public class Blog implements Serializable{
                 ", authorId='" + authorId + '\'' +
                 '}';
     }
+
 }

@@ -6,6 +6,7 @@ import com.coco.cloud.mybatis.framework.executor.Executor;
  * MeBatis的API，提供给应用层使用
  */
 public class DefaultSqlSession {
+
     private Configuration configuration;
     private Executor executor;
 
@@ -29,4 +30,5 @@ public class DefaultSqlSession {
         // 打印代理对象时会自动调用toString()方法，触发invoke()
         return executor.query(sql, parameter, pojo);
     }
+
 }

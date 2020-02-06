@@ -84,4 +84,5 @@ public class ResultSetHandler {
         String tail = word.substring(1);
         return first.toUpperCase() + tail;
     }
+
 }

@@ -38,4 +38,5 @@ public class MapperProxy implements InvocationHandler{
         // 否则直接执行被代理对象的原方法
         return method.invoke(proxy, args);
     }
+
 }
