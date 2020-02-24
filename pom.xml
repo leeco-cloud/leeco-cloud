@@ -20,6 +20,7 @@
         <module>coco-spring</module>
         <module>coco-mybatis</module>
         <module>coco-algorithm</module>
+        <module>coco-design-patterns</module>
     </modules>
 
     <!-- repository address -->

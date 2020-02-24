@@ -1,4 +1,4 @@
-package com.coco.cloud.algorithm.strategy;
+package com.coco.cloud.design.strategy;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.coco.cloud.algorithm.strategy;
+package com.coco.cloud.design.strategy;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;

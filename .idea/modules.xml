@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/coco-algorithm/coco-algorithm.iml" filepath="$PROJECT_DIR$/coco-algorithm/coco-algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/coco-cloud.iml" filepath="$PROJECT_DIR$/coco-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coco-design-patterns/coco-design-patterns.iml" filepath="$PROJECT_DIR$/coco-design-patterns/coco-design-patterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/coco-mybatis/coco-mybatis.iml" filepath="$PROJECT_DIR$/coco-mybatis/coco-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/coco-spring/coco-spring.iml" filepath="$PROJECT_DIR$/coco-spring/coco-spring.iml" />
     </modules>
