@@ -9,7 +9,7 @@ import com.alibaba.fastjson.JSON;
  * @version 0.0.1
  * @date 2020/3/1 20:32
  */
-public class PrototypeClone extends PrototypeCloneTest {
+public class PrototypeClone{
 
     private Integer id;
 
