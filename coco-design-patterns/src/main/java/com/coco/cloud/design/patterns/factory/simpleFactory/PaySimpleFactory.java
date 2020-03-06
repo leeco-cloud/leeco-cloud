@@ -7,7 +7,7 @@ package com.coco.cloud.design.patterns.factory.simpleFactory;
  */
 class PaySimpleFactory {
 
-    private PaySimpleFactory(){}
+    public PaySimpleFactory(){}
 
     static Pay create(Pay pay){
         return pay;
