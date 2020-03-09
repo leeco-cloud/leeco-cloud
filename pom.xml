@@ -21,6 +21,7 @@
         <module>coco-mybatis</module>
         <module>coco-algorithm</module>
         <module>coco-design-patterns</module>
+        <module>coco-netty</module>
     </modules>
 
     <!-- repository address -->
