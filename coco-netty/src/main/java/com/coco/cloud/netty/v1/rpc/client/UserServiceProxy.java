@@ -1,4 +1,4 @@
-package com.coco.cloud.netty.rpc.client;
+package com.coco.cloud.netty.v1.rpc.client;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

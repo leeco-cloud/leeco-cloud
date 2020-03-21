@@ -1,12 +1,10 @@
-package com.coco.cloud.netty.rpc.client;
+package com.coco.cloud.netty.v1.rpc.client;
 
-import com.coco.cloud.netty.rpc.UserService;
+import com.coco.cloud.netty.v1.rpc.UserService;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.OutputStream;
-import java.lang.reflect.Proxy;
 import java.net.Socket;
 
 /**

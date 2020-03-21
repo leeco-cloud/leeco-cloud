@@ -1,6 +1,6 @@
-package com.coco.cloud.netty.rpc.server;
+package com.coco.cloud.netty.v1.rpc.server;
 
-import com.coco.cloud.netty.rpc.UserService;
+import com.coco.cloud.netty.v1.rpc.UserService;
 
 /**
  * @author liuqiang@ourdocker.cn

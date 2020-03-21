@@ -1,4 +1,4 @@
-package com.coco.cloud.netty.rpc;
+package com.coco.cloud.netty.v1.rpc;
 
 /**
  * @author liuqiang@ourdocker.cn
