@@ -1,6 +1,8 @@
 package com.coco.cloud.calculator;
 
+import java.util.List;
 import java.util.Stack;
+import java.util.regex.Pattern;
 
 /**
  * 环境
@@ -13,42 +15,34 @@ class Context {
     /**
      * 操作数栈
      */
-    private Stack<AbstractCalculator> mathStack = new Stack<>();
-
-    /**
-     * 表达式栈
-     */
-    private Stack<AbstractCalculator> expressionStack = new Stack<>();
+    private static Stack<String> mathStack = new Stack<>();
 
     int parse(String math) {
         // 去除空字符串 并且获取所有字符
         math = math.replaceAll(" ", "");
         // 得到逆波兰表达式
-        String transfer = PolandUtil.transfer(math);
+        List<String> expressionList = PolandUtil.transfer(math);
         // 依次入栈出栈计算
-        return calcRevPolishNotation(transfer);
+        return calcRevPolishNotation(expressionList);
     }
 
     /**
      * 通过逆波兰表达式计算结果
      */
-    private static int calcRevPolishNotation(String express){
-        Stack<String> stack = new Stack<>();
-        for (int i = 0; i <express.length() ;i++) {
-            // 普通数值的处理
-            if ("\\d".matches(express.charAt(i) + "")){
-                stack.push(express.charAt(i) + "");
-                // + - * / 运算符的处理
-            }else if ((express.charAt(i) + "").matches("[+\\-*/]")){
-                String k1 = stack.pop();
-                String k2 = stack.pop();
-                // 计算结果
-                int res = calcValue(k1, k2, (express.charAt(i) + ""));
-                stack.push(res+"");
+    private static int calcRevPolishNotation(List<String> expressionList){
+        expressionList.forEach(expression -> {
+            // 1.如果是操作数 则直接入栈
+            if (Pattern.matches("\\d",expression)){
+                mathStack.push(expression);
+                return;
             }
-
-        }
-        return Integer.parseInt(stack.pop());
+            // 2.如果是操作数 则取出栈顶的两个操作数 与运算符运算 将结果压入栈中
+            String left = mathStack.pop();
+            String right = mathStack.pop();
+            int mathResult = calcValue(left,right,expression);
+            mathStack.push(String.valueOf(mathResult));
+        });
+        return Integer.parseInt(mathStack.pop());
     }
 
     /**

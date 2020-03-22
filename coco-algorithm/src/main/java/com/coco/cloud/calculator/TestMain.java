@@ -9,7 +9,7 @@ public class TestMain {
 
     public static void main(String[] args) {
         Context context = new Context();
-        String math = " 1 * (2 + 4) - 6";
+        String math = " 1 * (2 + 5) - 5";
         int result = context.parse(math);
         System.out.println(result);
     }
