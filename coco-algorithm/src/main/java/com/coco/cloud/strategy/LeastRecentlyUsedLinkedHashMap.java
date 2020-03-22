@@ -1,4 +1,4 @@
-package com.coco.cloud.design.strategy;
+package com.coco.cloud.strategy;
 
 import java.util.LinkedHashMap;
 

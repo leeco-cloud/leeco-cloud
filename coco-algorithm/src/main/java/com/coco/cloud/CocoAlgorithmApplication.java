@@ -1,4 +1,4 @@
-package com.coco.cloud.design;
+package com.coco.cloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
