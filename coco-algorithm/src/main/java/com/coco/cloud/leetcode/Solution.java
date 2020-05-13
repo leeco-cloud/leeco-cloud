@@ -5,12 +5,12 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * 二叉树的层序遍历
+ * 二叉树的层级遍历 :  BFS + LEVEL
  * @author liuqiang@ourdocker.cn
  * @version 0.0.1
  * @date 2020/5/13 22:22
  */
-class Solution {
+public class Solution {
 
     /**
      * 深度
@@ -66,11 +66,26 @@ class Solution {
         return result;
     }
 
-}
+    private static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
 
-public class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode(int x) { val = x; }
-  }
+    public static void main(String[] args) {
+        TreeNode treeNode1 = new TreeNode(1);
+        TreeNode treeNode2 = new TreeNode(2);
+        TreeNode treeNode3 = new TreeNode(3);
+        TreeNode treeNode4 = new TreeNode(4);
+        TreeNode treeNode5 = new TreeNode(5);
+        treeNode1.left = treeNode2;
+        treeNode1.right = treeNode3;
+        treeNode2.left = treeNode4;
+        treeNode3.right = treeNode5;
+        Solution solution = new Solution();
+        List<List<Integer>> lists = solution.levelOrder(treeNode1);
+        System.out.println(lists.toString());
+    }
+
+}
