@@ -1,7 +1,5 @@
 package com.coco.cloud.leetcode;
 
-import java.util.*;
-import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * 给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。
@@ -21,7 +19,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 public class FindMedianSortedArrays {
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        // 利用二分查找 要求:时间复杂度 log(m+n)
+        // 划分数组 要求:时间复杂度 log(m+n)
         int m = nums1.length;
         int n = nums2.length;
         if (m > n) {
