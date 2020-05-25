@@ -11,6 +11,10 @@ import java.util.Map;
  */
 public class LRUCache {
 
+    /**
+     * 采用hash表 + 双向链表 = 哈希链表
+     * @param capacity 容量
+     */
     public LRUCache(int capacity) {
         nodeMap = new HashMap<>(capacity);
         this.capacity = capacity;
