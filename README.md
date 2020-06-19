@@ -4,10 +4,9 @@
 
 + leeco-spring-framework（手撸spring源码） 
 + leeco-mybatis（手撸mybatis源码）
-+ leeco-netty（手撸netty源码） -未开始
 + leeco-design-patterns（手撸常用设计模式）
 + leeco-algorithm（手撸算法）
-+ leeco-rpc（手撸RPC实现） -未开始
++ leeco-rpc（手撸RPC实现基于netty） -未开始
 
 ...
 
