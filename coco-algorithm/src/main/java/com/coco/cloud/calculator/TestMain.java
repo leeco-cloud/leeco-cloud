@@ -1,6 +1,7 @@
 package com.coco.cloud.calculator;
 
 /**
+ * 实现多优先级的计算器
  * @author liuqiang@ourdocker.cn
  * @version 0.0.1
  * @date 2020/3/22 16:39
@@ -8,10 +9,7 @@ package com.coco.cloud.calculator;
 public class TestMain {
 
     public static void main(String[] args) {
-        Context context = new Context();
-        String math = " 1 * (2 + 5) - 5";
-        int result = context.parse(math);
-        System.out.println(result);
+        CalculatorUtils.calculate("2 + 4 * 3 - 5 * 2 + 6 / 12");
     }
 
 }
