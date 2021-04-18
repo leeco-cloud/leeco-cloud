@@ -8,7 +8,7 @@ import java.util.List;
  * @version 0.0.1
  * @date 2021/4/17 22:02
  */
-public class 堆排序 {
+public class 大小堆 {
 
 
     /** 1. 构建二叉堆 */
