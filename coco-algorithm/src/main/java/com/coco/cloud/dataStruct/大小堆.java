@@ -12,7 +12,7 @@ public class 大小堆 {
 
 
     /** 1. 构建二叉堆 */
-    private static List<Integer> convertStackList(List<Integer> list){
+    public static List<Integer> convertStackList(List<Integer> list){
         int index = list.size() - 1;
         while(index > 1){
             Integer current = list.get(index);
@@ -70,7 +70,7 @@ public class 大小堆 {
 
 
     /** 3. 删除(删除堆顶元素 拿堆底元素补充 然后逐步下沉) */
-    private static List<Integer> delete(List<Integer> stackList) {
+    public static List<Integer> delete(List<Integer> stackList) {
         Integer lastNode = stackList.get(stackList.size() - 1);
         stackList.set(0,lastNode);
         stackList.remove(stackList.size() - 1);
