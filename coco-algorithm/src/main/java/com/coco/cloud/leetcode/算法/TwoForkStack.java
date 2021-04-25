@@ -1,4 +1,4 @@
-package com.coco.cloud.leetcode;
+package com.coco.cloud.leetcode.算法;
 
 /**
  * 二叉堆算法 => 堆排序

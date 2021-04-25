@@ -1,4 +1,4 @@
-package com.coco.cloud.leetcode;
+package com.coco.cloud.leetcode.算法;
 
 /**
  * 旋转子链表

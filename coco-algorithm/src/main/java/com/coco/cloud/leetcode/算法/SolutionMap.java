@@ -1,8 +1,6 @@
-package com.coco.cloud.leetcode;
+package com.coco.cloud.leetcode.算法;
 
 import java.util.HashMap;
-import java.util.Queue;
-import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * @author liuqiang@ourdocker.cn
