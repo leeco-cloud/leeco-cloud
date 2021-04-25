@@ -7,7 +7,7 @@ import java.util.Stack;
  * @version 0.0.1
  * @date 2021/4/25 15:37
  */
-public class 最小堆 {
+public class 最小栈 {
 
     private static Stack<Integer> allNumberStack = new Stack<>();
 

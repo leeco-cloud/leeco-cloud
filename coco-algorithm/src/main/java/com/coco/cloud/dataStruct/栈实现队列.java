@@ -9,15 +9,15 @@ import java.util.Stack;
  */
 public class 栈实现队列 {
 
-    public static Stack<Integer> tempStack = new Stack<>();
+    private static Stack<Integer> tempStack = new Stack<>();
 
-    public static Stack<Integer> stack = new Stack<>();
+    private static Stack<Integer> stack = new Stack<>();
 
-    public static void push(Integer number){
+    private static void push(Integer number){
         tempStack.push(number);
     }
 
-    public static Integer pop(){
+    private static Integer pop(){
         if (stack.isEmpty()){
             while(!tempStack.isEmpty()){
                 stack.push(tempStack.pop());
