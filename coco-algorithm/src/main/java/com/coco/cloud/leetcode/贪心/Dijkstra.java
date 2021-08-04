@@ -14,9 +14,7 @@ public class Dijkstra {
         // 构造邻接矩阵
         int[][] dist = new int[n][n];
         for (int[] time : times) {
-            for (int j = 0; j < time.length; j++) {
-                dist[times[j][0] - 1][times[j][1] - 1] = times[j][2];
-            }
+            dist[time[0] - 1][time[1] - 1] = time[2];
         }
         // 已经遍历过的节点距离起点的长度
         int[] close = new int[n];
@@ -24,14 +22,18 @@ public class Dijkstra {
 
         // 遍历到但是没有执行完逻辑的节点距离起点的长度
         int[] open = new int[n];
-        Arrays.fill(close, max);
+        Arrays.fill(open, max);
         open[k-1] = 0;
 
-        while(!openIsEmpty(open,max)){
+        while(openIsNotEmpty(open,max)){
             int minOpen = getMinOpen(open);
             for (int i = 0; i < dist[minOpen].length; i++) {
                 if (dist[minOpen][i] != 0 && i != k - 1) {
-                    open[i] = Math.min(dist[k - 1][i], open[minOpen] + dist[minOpen][i]);
+                    if (dist[k - 1][i] == 0){
+                        open[i] = open[minOpen] + dist[minOpen][i];
+                    }else{
+                        open[i] = Math.min(dist[k - 1][i], open[minOpen] + dist[minOpen][i]);
+                    }
                 }
             }
             close[minOpen] = open[minOpen];
@@ -62,7 +64,7 @@ public class Dijkstra {
         return minIndex;
     }
 
-    private boolean openIsEmpty(int[] open,int max) {
+    private boolean openIsNotEmpty(int[] open,int max) {
         for (int i : open) {
             if (i >= max){
                 continue;
@@ -74,10 +76,11 @@ public class Dijkstra {
 
     public static void main(String[] args) {
         Dijkstra dijkstra = new Dijkstra();
-        int[][] times = {{2,1,1},{2,3,1},{3,4,1}};
-        int n = 4,k = 2;
+        int[][] times = {{1,2,1}};
+        int n = 2,k = 2;
         int i = dijkstra.networkDelayTime(times, n, k);
         System.out.println(i);
     }
 
 }
+
